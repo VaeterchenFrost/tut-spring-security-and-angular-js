@@ -2,11 +2,11 @@ security:
   user:
     password: password
   ignored:
-  - "*.bundle.*"
+    - "*.bundle.*"
 spring:
   session:
     store-type: redis
-zuul:
+zuul: # This says "map paths with the pattern /resource/** in this server to the same paths in the remote server at localhost:9000".
   routes:
     resource:
       path: /resource/**
