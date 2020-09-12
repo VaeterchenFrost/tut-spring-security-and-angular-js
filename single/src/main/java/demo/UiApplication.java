@@ -19,6 +19,12 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @SpringBootApplication
 @Controller
+/**
+ * The application we have now is close to what a user might expect in a "real"
+ * application in a live environment, and it probably could be used as a
+ * template for building out into a more feature rich application with that
+ * architecture (single server with static content and JSON resources).
+ */
 public class UiApplication {
 
     @GetMapping("/user")
