@@ -2,7 +2,7 @@ security:
   user:
     password: password
   ignored:
-  - "*.bundle.*"
+    - "*.bundle.*"
 logging:
   level:
     org.springframework.security: DEBUG
