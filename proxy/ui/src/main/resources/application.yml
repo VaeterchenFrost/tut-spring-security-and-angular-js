@@ -11,4 +11,4 @@ zuul: # This says "map paths with the pattern /resource/** in this server to the
     resource:
       path: /resource/**
       url: http://localhost:9000
-      sensitive-headers:
+      sensitive-headers: # all are forwarded
