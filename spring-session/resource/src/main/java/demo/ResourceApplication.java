@@ -21,6 +21,10 @@ public class ResourceApplication extends WebSecurityConfigurerAdapter {
 		http.cors().and().authorizeRequests().anyRequest().authenticated();
 	}
 
+	/**
+	 * The pre-flight check from the browser will now be handled by Spring MVC, but
+	 * we need to tell Spring Security that it is allowed to let it through - see {@link ResourceApplication#configure(HttpSecurity)}.
+	 */
 	@RequestMapping("/")
 	@CrossOrigin(origins = "*", maxAge = 3600, allowedHeaders = { "x-auth-token", "x-requested-with", "x-xsrf-token" })
 	public Message home() {
